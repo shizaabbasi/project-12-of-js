@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+<h2>Login form</h2>
+<form name="a" onsubmit="validateForm()">
+    Name:<input type="text" name="j">
+<input type="submit" value="Submit">
+<p id="message"></p>
+</form>
+<script>
+    function validateForm(){
+        var x = document.forms["a"]['j'].value;
+        if(x==""){
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+    </script>
+    <p>Enter your age and click OK:</p>
+    <input id="1" type="number" min="18" max="60" required>
+    <button onclick="myFunction()">OK</button>
+    <p id="r"></p>
+    <script>
+        function myFunction(){
+            var inpObj=document.getElementById("1");
+            if(!inpObj.checkValidity()){
+                document.getElementById("r").innerHTML=inpObj.validationMessage;
+
+            }else{
+                document.getElementById("r").innerHTML="Input OK";
+            }
+        }
+    </script>
+</body>
+</html>
